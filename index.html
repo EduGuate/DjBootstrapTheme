@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJ Electro | The Ultimate Music Journey</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      background-color: #121212;
+    }
+
+    .header {
+      background-image: url('https://example.com/dj-background.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: fadeIn 2s;
+    }
+
+    .header h1 {
+      font-size: 4.5rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+      margin-bottom: 1rem;
+    }
+
+    .header p {
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-explore {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      color: #121212;
+      background-color: #f9c802;
+      border-radius: 50px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-explore:hover {
+      background-color: #e6b802;
+      transform: translateY(-3px);
+    }
+
+    .about, .events, .music, .merch, .contact {
+      padding: 4rem 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .about {
+      background-color: #1a1a1a;
+    }
+
+    .events {
+      background-color: #2b2b2b;
+    }
+
+    .music {
+      background-color: #1a1a1a;
+    }
+
+    .merch {
+      background-color: #2b2b2b;
+    }
+
+    .contact {
+      background-color: #e74c3c;
+      color: #ffffff;
+    }
+
+    .section-title {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 5px;
+      background-color: #f9c802;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .about p, .music p, .merch p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .events .event-card {
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+      background-color: #333333;
+      border: none;
+    }
+
+    .events .event-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .music-gallery, .merch-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .music-gallery img, .merch-gallery img {
+      width: calc(33.333% - 1rem);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s;
+    }
+
+    .music-gallery img:hover, .merch-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .contact-buttons a {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      color: white;
+      background-color: #e74c3c;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .contact-buttons a:hover {
+      transform: scale(1.1);
+      background-color: #c0392b;
+    }
+
+    .contact-buttons a:active {
+      transform: scale(0.95);
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>DJ Electro</h1>
+      <p>Experience the ultimate music journey</p>
+      <a href="#about" class="btn-explore mt-4">Explore More</a>
+    </div>
+  </div>
+
+  <div id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p>DJ Electro is a world-renowned DJ and music producer, known for his energetic performances and unique blend of electronic and dance music. With over a decade of experience, he has performed at some of the biggest music festivals and clubs around the globe.</p>
+    </div>
+  </div>
+
+  <div class="events">
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="event-card card">
+            <img src="https://example.com/event1.jpg" alt="Event 1" class="img-fluid">
+            <div class="card-body">
+              <h5 class="card-title">Event 1</h5>
+              <p class="card-text">Date: June 1, 2023</p>
+              <p class="card-text">Location: City A</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="event-card card">
+            <img src="https://example.com/event2.jpg" alt="Event 2" class="img-fluid">
+            <div class="card-body">
+              <h5 class="card-title">Event 2</h5>
+              <p class="card-text">Date: July 15, 2023</p>
+              <p class="card-text">Location: City B</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="event-card card">
+            <img src="https://example.com/event3.jpg" alt="Event 3" class="img-fluid">
+            <div class="card-body">
+              <h5 class="card-title">Event 3</h5>
+              <p class="card-text">Date: August 20, 2023</p>
+              <p class="card-text">Location: City C</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="music">
+    <div class="container">
+      <h2 class="section-title">Music</h2>
+      <p>Explore the latest tracks and mixes by DJ Electro. Immerse yourself in the beats that define the global electronic dance music scene.</p>
+      <div class="music-gallery">
+        <img src="https://example.com/track1.jpg" alt="Track 1">
+        <img src="https://example.com/track2.jpg" alt="Track 2">
+        <img src="https://example.com/track3.jpg" alt="Track 3">
+      </div>
+    </div>
+  </div>
+
+  <div class="merch">
+    <div class="container">
+      <h2 class="section-title">Merchandise</h2>
+      <p>Show your support for DJ Electro with exclusive merchandise. From t-shirts to hats, find the perfect gear for every fan.</p>
+      <div class="merch-gallery">
+        <img src="https://example.com/merch1.jpg" alt="Merch 1">
+        <img src="https://example.com/merch2.jpg" alt="Merch 2">
+        <img src="https://example.com/merch3.jpg" alt="Merch 3">
+      </div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-buttons">
+        <a href="tel:+1234567890">Call Me</a>
+        <a href="mailto:djelectro@example.com">Email Me</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
