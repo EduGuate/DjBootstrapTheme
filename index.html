@@ -1,264 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DJ Electro | The Ultimate Music Journey</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #ffffff;
-      background-color: #121212;
-    }
-
-    .header {
-      background-image: url('https://example.com/dj-background.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      animation: fadeIn 2s;
-    }
-
-    .header h1 {
-      font-size: 4.5rem;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-      margin-bottom: 1rem;
-    }
-
-    .header p {
-      font-size: 1.5rem;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .btn-explore {
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      color: #121212;
-      background-color: #f9c802;
-      border-radius: 50px;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .btn-explore:hover {
-      background-color: #e6b802;
-      transform: translateY(-3px);
-    }
-
-    .about, .events, .music, .merch, .contact {
-      padding: 4rem 0;
-      text-align: center;
-      position: relative;
-    }
-
-    .about {
-      background-color: #1a1a1a;
-    }
-
-    .events {
-      background-color: #2b2b2b;
-    }
-
-    .music {
-      background-color: #1a1a1a;
-    }
-
-    .merch {
-      background-color: #2b2b2b;
-    }
-
-    .contact {
-      background-color: #e74c3c;
-      color: #ffffff;
-    }
-
-    .section-title {
-      font-size: 3rem;
-      margin-bottom: 2rem;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      width: 50px;
-      height: 5px;
-      background-color: #f9c802;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .about p, .music p, .merch p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .events .event-card {
-      margin-bottom: 2rem;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s;
-      background-color: #333333;
-      border: none;
-    }
-
-    .events .event-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .music-gallery, .merch-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .music-gallery img, .merch-gallery img {
-      width: calc(33.333% - 1rem);
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s;
-    }
-
-    .music-gallery img:hover, .merch-gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .contact-buttons a {
-      display: inline-block;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      color: white;
-      background-color: #e74c3c;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    .contact-buttons a:hover {
-      transform: scale(1.1);
-      background-color: #c0392b;
-    }
-
-    .contact-buttons a:active {
-      transform: scale(0.95);
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DJ Electro — Live in the frequency · Free template</title>
+  <meta name="description" content="DJ Electro — free Bootstrap 5 template for DJs and electronic artists: releases, live shows, story and newsletter. MIT license.">
+  <meta name="theme-color" content="#09090c">
+  <meta property="og:title" content="DJ Electro — Free DJ template">
+  <meta property="og:description" content="Free Bootstrap 5 template for DJs and electronic artists.">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
+  <a class="skip" href="#top">Skip to content</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <div class="free-bar">
     <div class="container">
-      <h1>DJ Electro</h1>
-      <p>Experience the ultimate music journey</p>
-      <a href="#about" class="btn-explore mt-4">Explore More</a>
+      <span><b>FREE TEMPLATE</b> DJ &amp; electronic artist template — 100% free <span class="license">· MIT license</span></span>
+      <a href="https://github.com/EduGuate/DjBootstrapTheme" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> View on GitHub</a>
     </div>
   </div>
 
-  <div id="about" class="about">
-    <div class="container">
-      <h2 class="section-title">About</h2>
-      <p>DJ Electro is a world-renowned DJ and music producer, known for his energetic performances and unique blend of electronic and dance music. With over a decade of experience, he has performed at some of the biggest music festivals and clubs around the globe.</p>
+  <nav class="navbar navbar-expand-lg sticky-top" data-bs-theme="dark" aria-label="Main">
+    <div class="container py-2">
+      <a class="navbar-brand" href="#top"><span class="brand-dot"></span>DJ / ELECTRO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto gap-lg-3 align-lg-items-center">
+          <li class="nav-item"><a class="nav-link" href="#music">Music</a></li>
+          <li class="nav-item"><a class="nav-link" href="#shows">Shows</a></li>
+          <li class="nav-item"><a class="nav-link" href="#story">Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-free" href="#template">Free template</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </nav>
 
-  <div class="events">
-    <div class="container">
-      <h2 class="section-title">Upcoming Events</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="event-card card">
-            <img src="https://example.com/event1.jpg" alt="Event 1" class="img-fluid">
-            <div class="card-body">
-              <h5 class="card-title">Event 1</h5>
-              <p class="card-text">Date: June 1, 2023</p>
-              <p class="card-text">Location: City A</p>
-            </div>
+  <main id="top">
+    <section class="hero">
+      <canvas id="wave" aria-hidden="true"></canvas>
+      <div class="container position-relative">
+        <p class="mono eyebrow hero-in"><span class="live-dot"></span> Independent electronic artist · <span id="clock">04:20 AM</span></p>
+        <h1 class="hero-in"><span class="glitch" data-text="Feel the">Feel the</span><br><span class="acid-text">frequency.</span></h1>
+        <p class="hero-copy mb-4 hero-in">Sets that bend the room. New sound from the edge of the dance floor, made for the nights you don't want to end.</p>
+        <div class="d-flex flex-wrap gap-3 hero-in">
+          <a class="btn btn-acid" href="#music">Listen to the latest <i class="bi bi-arrow-up-right ms-2"></i></a>
+          <a class="btn btn-ghost" href="#shows">Next shows</a>
+        </div>
+        <div class="eq hero-in" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Berlin</span><span>Lisbon</span><span>Mexico City</span><span>128 BPM</span><span>Neon Pulse</span><span>Afterimage</span><span>Signal / Noise</span>
+        <span>Berlin</span><span>Lisbon</span><span>Mexico City</span><span>128 BPM</span><span>Neon Pulse</span><span>Afterimage</span><span>Signal / Noise</span>
+      </div>
+    </div>
+
+    <section class="section" id="music">
+      <div class="container">
+        <div class="row align-items-end mb-5 reveal">
+          <div class="col-lg-7"><p class="mono section-kicker">01 / Latest releases</p><h2 class="section-title">New<br>energy.</h2></div>
+          <div class="col-lg-4 ms-auto mt-3 mt-lg-0"><p class="muted mb-0">Three transmissions from the studio. Press play, turn it up, let the low end do the talking.</p></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <article class="release-card tilt">
+              <div class="cover"><img src="assets/cover-neon-pulse.webp" alt="Neon Pulse cover: glowing acid-green harmonograph curves on deep violet" width="800" height="800" loading="lazy"><button class="play" type="button" aria-label="Play Neon Pulse" data-track="Neon Pulse"><i class="bi bi-play-fill"></i></button></div>
+              <div class="release-body"><span class="mono muted">Single · 2024</span><h3 class="release-title">Neon Pulse</h3><div class="progress-line"><i></i></div></div>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="release-card tilt">
+              <div class="cover"><img src="assets/cover-afterimage.webp" alt="Afterimage cover: violet and magenta wave interference pattern" width="800" height="800" loading="lazy"><button class="play" type="button" aria-label="Play Afterimage" data-track="Afterimage"><i class="bi bi-play-fill"></i></button></div>
+              <div class="release-body"><span class="mono muted">EP · 2024</span><h3 class="release-title">Afterimage</h3><div class="progress-line"><i></i></div></div>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="release-card tilt">
+              <div class="cover"><img src="assets/cover-signal-noise.webp" alt="Signal / Noise cover: LED spectrogram with a rising acid sweep" width="800" height="800" loading="lazy"><button class="play" type="button" aria-label="Play Signal / Noise" data-track="Signal / Noise"><i class="bi bi-play-fill"></i></button></div>
+              <div class="release-body"><span class="mono muted">Mix · 2023</span><h3 class="release-title">Signal / Noise</h3><div class="progress-line"><i></i></div></div>
+            </article>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="event-card card">
-            <img src="https://example.com/event2.jpg" alt="Event 2" class="img-fluid">
-            <div class="card-body">
-              <h5 class="card-title">Event 2</h5>
-              <p class="card-text">Date: July 15, 2023</p>
-              <p class="card-text">Location: City B</p>
-            </div>
+        <p class="mono muted demo-note">Demo player · connect your SoundCloud, Spotify or Bandcamp embeds</p>
+      </div>
+    </section>
+
+    <section class="section" id="shows">
+      <div class="container">
+        <div class="row mb-5 reveal"><div class="col-lg-6"><p class="mono section-kicker">02 / Live calendar</p><h2 class="section-title">Meet me<br>after dark.</h2></div></div>
+        <div class="event row align-items-center reveal"><div class="col-md-2 event-date">18.10</div><div class="col-md-6"><h3 class="h4 mb-1">Voltage Room</h3><p class="event-place mb-0">Berlin, DE · Warehouse 04</p></div><div class="col-md-3 mt-2 mt-md-0"><span class="mono muted">With Luma / K-01</span></div><div class="col-md-1 text-md-end mt-2 mt-md-0"><a href="#contact" class="event-link" aria-label="Tickets for Voltage Room"><i class="bi bi-arrow-up-right fs-4"></i></a></div></div>
+        <div class="event row align-items-center reveal"><div class="col-md-2 event-date">02.11</div><div class="col-md-6"><h3 class="h4 mb-1">Lumen Festival</h3><p class="event-place mb-0">Lisbon, PT · Main Stage</p></div><div class="col-md-3 mt-2 mt-md-0"><span class="mono muted">23:45 — 01:00</span></div><div class="col-md-1 text-md-end mt-2 mt-md-0"><a href="#contact" class="event-link" aria-label="Tickets for Lumen Festival"><i class="bi bi-arrow-up-right fs-4"></i></a></div></div>
+        <div class="event row align-items-center reveal"><div class="col-md-2 event-date">23.11</div><div class="col-md-6"><h3 class="h4 mb-1">Subsonic</h3><p class="event-place mb-0">Mexico City, MX · Bajo Club</p></div><div class="col-md-3 mt-2 mt-md-0"><span class="mono muted">Tickets on sale</span></div><div class="col-md-1 text-md-end mt-2 mt-md-0"><a href="#contact" class="event-link" aria-label="Tickets for Subsonic"><i class="bi bi-arrow-up-right fs-4"></i></a></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-7 reveal"><p class="mono section-kicker">03 / The story</p><h2 class="section-title mb-4">Built for<br>the rush.</h2><p class="muted fs-5 lh-lg">DJ Electro is a producer and selector obsessed with the moment a room moves as one. From analogue synths to sprawling festival systems, every set is a live experiment in tension, release and pure connection.</p></div>
+          <div class="col-lg-4 ms-auto reveal">
+            <div class="stat mb-4"><strong><span data-count="12">0</span>+</strong><span class="muted">years in the booth</span></div>
+            <div class="stat mb-4"><strong data-count="28">0</strong><span class="muted">cities in the circuit</span></div>
+            <div class="stat"><strong><span data-count="140">0</span>k</strong><span class="muted">people reached live</span></div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="event-card card">
-            <img src="https://example.com/event3.jpg" alt="Event 3" class="img-fluid">
-            <div class="card-body">
-              <h5 class="card-title">Event 3</h5>
-              <p class="card-text">Date: August 20, 2023</p>
-              <p class="card-text">Location: City C</p>
-            </div>
+      </div>
+    </section>
+
+    <section class="section pt-0" id="contact">
+      <div class="container">
+        <div class="newsletter row align-items-center g-4 reveal">
+          <div class="col-lg-6"><p class="mono mb-3">Stay in the signal</p><h2 class="display-5 fw-bold mb-0 tight">One email.<br>All the noise.</h2></div>
+          <div class="col-lg-5 ms-auto">
+            <form class="d-flex gap-3" id="newsletter" novalidate>
+              <label class="visually-hidden" for="email">Email</label>
+              <input class="form-control" id="email" type="email" placeholder="your@email.com" autocomplete="email" required>
+              <button class="btn btn-dark px-4" type="submit">Join <i class="bi bi-arrow-up-right ms-1"></i></button>
+            </form>
+            <p class="form-status mono" id="form-status" role="status"></p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="music">
-    <div class="container">
-      <h2 class="section-title">Music</h2>
-      <p>Explore the latest tracks and mixes by DJ Electro. Immerse yourself in the beats that define the global electronic dance music scene.</p>
-      <div class="music-gallery">
-        <img src="https://example.com/track1.jpg" alt="Track 1">
-        <img src="https://example.com/track2.jpg" alt="Track 2">
-        <img src="https://example.com/track3.jpg" alt="Track 3">
+    <section class="section pt-0" id="template">
+      <div class="container">
+        <div class="opensource reveal">
+          <div>
+            <span class="free-pill mono">Free &amp; open source</span>
+            <h2 class="section-title small-title">Your sound.<br><span class="acid-text">Zero cost.</span></h2>
+            <p class="muted">Like this site? It's yours. DJ Electro is a free Bootstrap 5 template for DJs, producers and collectives — responsive, animated and MIT licensed.</p>
+          </div>
+          <div class="os-actions">
+            <a class="btn btn-acid" href="https://github.com/EduGuate/DjBootstrapTheme" target="_blank" rel="noopener noreferrer">Download on GitHub <i class="bi bi-arrow-up-right ms-2"></i></a>
+            <span class="mono muted">No sign-up. No card.</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <div class="merch">
-    <div class="container">
-      <h2 class="section-title">Merchandise</h2>
-      <p>Show your support for DJ Electro with exclusive merchandise. From t-shirts to hats, find the perfect gear for every fan.</p>
-      <div class="merch-gallery">
-        <img src="https://example.com/merch1.jpg" alt="Merch 1">
-        <img src="https://example.com/merch2.jpg" alt="Merch 2">
-        <img src="https://example.com/merch3.jpg" alt="Merch 3">
-      </div>
+  <footer>
+    <div class="container d-flex flex-wrap justify-content-between gap-3">
+      <span>© <span id="year"></span> DJ Electro · Demo template</span>
+      <span>Sound is a place.</span>
+      <span class="footer-links"><a href="#template">FREE TEMPLATE ↗</a><a href="LICENSE">MIT license</a><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://soundcloud.com" target="_blank" rel="noopener noreferrer">SoundCloud</a></span>
     </div>
-  </div>
+  </footer>
+  <div class="toast-now" id="now-playing" role="status" aria-live="polite"></div>
 
-  <div class="contact">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <div class="contact-buttons">
-        <a href="tel:+1234567890">Call Me</a>
-        <a href="mailto:djelectro@example.com">Email Me</a>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
